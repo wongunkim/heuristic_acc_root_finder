@@ -20,7 +20,7 @@ For each test polynomial of degree $d$, we have chosen its $m$ roots uniformly a
 
 In our experiments we only dealt with soft e/i tests for polynomials $p$ having roots in specified domains, and so double  complex precision (15 decimal digits per component -  the default complex type [128 bits] in $\texttt{NumPy}$)  was suffiicient to ensure correctness of our computations.
 
-We performed our tests for $d = 6400, 12800, 25600$, $\sigma = 1.4$, $\theta=1.00001$ and $\mu=0, 1, 2, 3, 4, 5, 10, 50, 100, d/16, d/8 d/4, d/2, 3d/4, d-1, d$.
+We performed our tests for $d = 6400, 12800, 25600$, $\sigma = 1.4$, $\theta=1.00001$ and $m=0, 1, 2, 3, 4, 5, 10, 50, 100, d/16, d/8 d/4, d/2, 3d/4, d-1, d$.
 
 For each of the 21 pairs $(d, \nu)$ we run 100 independent trials.
 
@@ -79,7 +79,8 @@ m=25599: 0 out of 100
 m=25600: 0 out of 100
 
 
-     d      m  sigma  isolation  incorrect  max_evals  max_h
+
+     d        m   sigma  isolation  incorrect  max_evals  max_h
         
    25600      0    1.4    1.00001          0         32     31
 
@@ -117,13 +118,13 @@ m=25600: 0 out of 100
 
 Process finished with exit code 0
 
-| Input Parameter: $d$ | Input Parameter: $\sigma$ | Input Parameter: $\theta$ | Number of roots $\mu$ in $D(0,1/\theta)$ | Max # NIR Evals | Max h | Output: incorrect |
+| Input Parameter: $d$ | Input Parameter: $\sigma$ | Input Parameter: $\theta$ | Number of roots $m$ in $D(0,1/\theta)$ | Max # NIR Evals | Max h | Output: incorrect |
 |---|---|---|---|---|---|---|
-| 25600 | 1.4 | 1.00001 | $\mu = 0$ | 32 | 31 | 0 |
-| 25600 | 1.4 | 1.00001 | $\mu \in [1, 2, 3, 4, 5, 10, 50, 100]$ | 32 | 0 | 0 |
-| 25600 | 1.4 | 1.00001 | $\mu = 1600$ | 16 | 0 | 0 |
-| 25600 | 1.4 | 1.00001 | $\mu \in [3200, 6400]$ | 8 | 0 | 0 |
-| 25600 | 1.4 | 1.00001 | $\mu \in [12800, 19200, 25599, 25600]$ | 4 | 0 | 0 |
+| 25600 | 1.4 | 1.00001 | $m = 0$ | 32 | 31 | 0 |
+| 25600 | 1.4 | 1.00001 | $m \in [1, 2, 3, 4, 5, 10, 50, 100]$ | 32 | 0 | 0 |
+| 25600 | 1.4 | 1.00001 | $m = 1600$ | 16 | 0 | 0 |
+| 25600 | 1.4 | 1.00001 | $m \in [3200, 6400]$ | 8 | 0 | 0 |
+| 25600 | 1.4 | 1.00001 | $m \in [12800, 19200, 25599, 25600]$ | 4 | 0 | 0 |
 
 
 
