@@ -8,7 +8,7 @@ from analysis import *
 pd.set_option('display.max_rows', None)
 
 
-###### SETTINGS for the paper #########
+#### SETTINGS for the paper ####
 
 RT_LOWER_BOUND = 1e-14
 RT_UPPER_BOUND = 1e14
@@ -17,7 +17,7 @@ DEFAULT_Q=32
 
 unit_c = 0
 unit_r = 1
-d_vals = [6400]#[6400, 12800, 25600]
+d_vals = [6400, 12800, 25600]
 sigma_vals = [1.4]
 
 num_tests = 100
@@ -28,8 +28,6 @@ def q_fcn(d, sigma):
 def u_fcn(d, sigma):
     return ceil(log2(q_fcn(d, sigma)))
 
-
-#------------------------------
 
 # TESTING CODE FOR ALG 1
 
